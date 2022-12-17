@@ -73,7 +73,7 @@ def main():
 
             temp_face = cv2.resize(temp_face, (200,200))
             cv2.putText(temp_face, get_label_emotion(emotion.squeeze().cpu().item()), (0,20), cv2.FONT_HERSHEY_COMPLEX, 1, (255,255,255))
-            cv2.putText(temp_face, get_label_emotion(label.item()), (110,190), cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,0))
+            cv2.putText(temp_face, get_label_emotion(label.item()), (0,190), cv2.FONT_HERSHEY_COMPLEX, 1, (255,255,0))
             cv2.imshow('face', temp_face)
 
             if cv2.waitKey(0) == 27:
